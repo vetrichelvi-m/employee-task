@@ -67,25 +67,21 @@
                                         </a>
                                         <div tabindex="-1" role="menu" aria-hidden="true"
                                             class="dropdown-menu dropdown-menu-right">
-                                            <button type="button" tabindex="0" class="dropdown-item">User
-                                                Account</button>
-                                            <button type="button" tabindex="0"
-                                                class="dropdown-item">Settings</button>
-                                            <h6 tabindex="-1" class="dropdown-header">Header</h6>
-                                            <button type="button" tabindex="0" class="dropdown-item">Actions</button>
-                                            <div tabindex="-1" class="dropdown-divider"></div>
-                                            <button type="button" tabindex="0"
-                                                class="dropdown-item">Dividers</button>
+
+                                    <button type="button" tabindex="0" class="dropdown-item">
+
+                                        <a href="{{ url('/logout') }}">Logout</a>
+                                    </button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="widget-content-left  ml-3 header-user-info">
                                     <div class="widget-heading">
-                                        Alina Mclourd
+                                        <a>hello,
+                                            {{ session()->get('username') ? session()->get('username') : ' Sign in' }}
+                                        </a>
                                     </div>
-                                    <div class="widget-subheading">
-                                        VP People Manager
-                                    </div>
+
                                 </div>
                                 <div class="widget-content-right header-user-info ml-3">
                                     <button type="button"
@@ -143,121 +139,21 @@
                                     Dashboard
                                 </a>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <i class="metismenu-icon pe-7s-diamond"></i>
-                                    Employee
-                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                </a>
-                                <ul class="mm-collapse">
-                                    <li>
-                                        {{-- <a href="{{ route('admin.employee.list') }}" class="mm-active">
-                                            <i class="metismenu-icon pe-7s-rocket"></i>
-                                            List
-                                        </a> --}}
-                                    </li>
-                                    <li>
-                                        {{-- <a href="{{ route('admin.employee.add') }}" class="mm-active">
-                                            <i class="metismenu-icon pe-7s-rocket"></i>
-                                            Add New
-                                        </a> --}}
-                                    </li>
-                                </ul>
-                            </li>
 
-                            <li>
-                                <a href="#">
-                                    <i class="metismenu-icon pe-7s-diamond"></i>
-                                    Task
-                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                </a>
-                                <ul class="mm-collapse">
-                                    <li>
-                                        {{-- <a href="{{ route('admin.task.list') }}" class="mm-active">
-                                            <i class="metismenu-icon pe-7s-rocket"></i>
-                                            List
-                                        </a> --}}
-                                    </li>
-                                    <li>
-                                        {{-- <a href="{{ route('admin.task.add') }}" class="mm-active">
-                                            <i class="metismenu-icon pe-7s-rocket"></i>
-                                            Add New
-                                        </a> --}}
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <i class="metismenu-icon pe-7s-diamond"></i>
-                                    Department
-                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                </a>
-                                <ul class="mm-collapse">
-                                    <li>
-                                        {{-- <a href="{{ route('admin.department.list') }}" class="mm-active">
-                                            <i class="metismenu-icon pe-7s-rocket"></i>
-                                            List
-                                        </a> --}}
-                                    </li>
-                                    <li>
-                                        {{-- <a href="{{ route('admin.department.add') }}" class="mm-active">
-                                            <i class="metismenu-icon pe-7s-rocket"></i>
-                                            Add New
-                                        </a> --}}
-                                    </li>
-                                </ul>
-                            </li>
-
-                             <li>
-                                <a href="#">
-                                    <i class="metismenu-icon pe-7s-diamond"></i>
-                                    Admin
-                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                </a>
-                                <ul class="mm-collapse">
-                                    <li>
-                                        {{-- <a href="{{ route('admin.admin.list') }}" class="mm-active">
-                                            <i class="metismenu-icon pe-7s-rocket"></i>
-                                            List
-                                        </a> --}}
-                                    </li>
-                                    <li>
-                                        {{-- <a href="{{ route('admin.admin.add') }}" class="mm-active">
-                                            <i class="metismenu-icon pe-7s-rocket"></i>
-                                            Add New
-                                        </a> --}}
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="metismenu-icon pe-7s-car"></i>
-                                    Components
-                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                </a>
-                                <ul class="mm-collapse">
-                                    <li>
-                                        <a href="index.html" class="mm-active">
-                                            <i class="metismenu-icon pe-7s-rocket"></i>
-                                            Button
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
                             <li>
                                 <a href="tables-regular.html">
-                                    <i class="metismenu-icon pe-7s-display2"></i>
-                                    Tables
+                                    <i class="metismenu-icon pe-7s-display2"> </i>
+                                    <a href="{{ url('/useraddressview') }}">useraddress</a>
+
                                 </a>
                             </li>
-                            <li class="app-sidebar__heading">Widgets</li>
+                            {{-- <li class="app-sidebar__heading">Widgets</li>
                             <li>
                                 <a href="dashboard-boxes.html">
                                     <i class="metismenu-icon pe-7s-display2"></i>
                                     Dashboard Boxes
                                 </a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>
